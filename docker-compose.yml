@@ -7,7 +7,7 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "8080:8080"
+      - "8080:8090"
     environment:
       - SPRING_DATA_MONGODB_URI=mongodb://mongo:27017/urlshortener
     depends_on:
