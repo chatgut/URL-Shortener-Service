@@ -1,0 +1,16 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/urlshortener
+      database: urlshortener
+
+  application:
+    name: url-shortener-service
+
+server:
+  port: 8080
+
+logging:
+  level:
+    org.springframework.web: DEBUG
+    com.urlshortener: DEBUG
