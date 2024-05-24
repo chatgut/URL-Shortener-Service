@@ -58,7 +58,7 @@ public class UrlController {
             String originalUrl = originalUrlOptional.get();
             HttpHeaders headers = new HttpHeaders();
             headers.setLocation(URI.create(originalUrl));
-            return new ResponseEntity<>(headers, HttpStatus.FOUND); // 302 Found status code
+            return new ResponseEntity<>(headers, HttpStatus.MOVED_PERMANENTLY); // 301 Found status code
         } else {
             return ResponseEntity.notFound().build();
         }
