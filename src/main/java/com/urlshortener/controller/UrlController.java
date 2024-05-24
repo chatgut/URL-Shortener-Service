@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/urls")
+@RequestMapping("/urls")
 public class UrlController {
 
     private final UrlShortenerService urlShortenerService;
@@ -25,12 +25,12 @@ public class UrlController {
         this.urlShortenerService = urlShortenerService;
     }
 
-    @PostMapping
+    @PostMapping("/create")
     public AllUrlDto createShortUrl(@RequestBody UrlRequestDto requestDto) {
         return urlShortenerService.createShortUrl(requestDto);
     }
 
-    @GetMapping("/{shortUrl}")
+    @GetMapping("/original/{shortUrl}")
     public ResponseEntity<OriginalUrlDto> getOriginalUrl(@PathVariable String shortUrl) {
         Optional<String> originalUrlOptional = urlShortenerService.getOriginalUrl(shortUrl);
         if (originalUrlOptional.isPresent()) {
@@ -46,12 +46,12 @@ public class UrlController {
         return urlShortenerService.getAllUrls();
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/remove/{id}")
     public void deleteShortUrl(@PathVariable String id) {
         urlShortenerService.deleteShortUrl(id);
     }
 
-    @GetMapping("/goto/{shortUrl}")
+    @GetMapping("/{shortUrl}")
     public ResponseEntity<Void> redirectToOriginalUrl(@PathVariable String shortUrl) {
         Optional<String> originalUrlOptional = urlShortenerService.getOriginalUrl(shortUrl);
         if (originalUrlOptional.isPresent()) {

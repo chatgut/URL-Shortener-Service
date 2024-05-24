@@ -28,7 +28,7 @@ If you need to customize the MongoDB connection settings, you can update the `SP
 # Usage Examples
 
 ## [POST] - Shortening a URL
-To shorten a URL, send a POST request to the `/api/urls` endpoint with the original URL in the request body.
+To shorten a URL, send a POST request to the `/urls/create` endpoint with the original URL in the request body.
 
 JSON Body:
 ```JSON
@@ -47,9 +47,9 @@ Exampel Output:
 ```
 ## [GET] - Show all generated URL(s) and content (just like Output above)
 ```
-http://localhost:8080/api/urls
+http://localhost:8080/urls
 ```
 ## [GET] - Redirect to original URL
-To redirect to the original URL, send a GET request to the `/api/urls/goto/{shortUrl}`. Replace `{shortUrl}` with the "shortUrl", example `2edf5e51`.
+To redirect to the original URL, send a GET request to the `/urls/{shortUrl}`. Replace `{shortUrl}` with the "shortUrl", example `2edf5e51`.
 ## [DELETE] - Remove URL from DB
-To remove URL from DB, send DELETE request to `/api/urls/{id}`. Replace `{id}` with the related "id", example `664ba4785b64a14ee2d09a26`.
+To remove URL from DB, send DELETE request to `/urls/remove/{id}`. Replace `{id}` with the related "id", example `664ba4785b64a14ee2d09a26`.
