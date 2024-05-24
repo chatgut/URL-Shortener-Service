@@ -1,5 +1,5 @@
 # URL Shortener Service
-This is a URL shortener service built with SpringBoot and MongoDB.
+This is a microservice built with SpringBoot and MongoDB.
 
 ### Running the Application
 1. Clone this repository to your local machine:
@@ -36,7 +36,7 @@ JSON Body:
     "originalUrl": "http://example.com"
 }
 ```
-Output:
+Exampel Output:
 ```JSON
 {
     "id": "664ba4785b64a14ee2d09a26",
