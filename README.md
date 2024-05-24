@@ -50,6 +50,6 @@ Example Output:
 http://localhost:8080/urls
 ```
 ## [GET] - Redirect to original URL
-To redirect to the original URL, send a GET request to the `/urls/{shortUrl}`. Replace `{shortUrl}` with the "shortUrl", example `2edf5e51`.
+To redirect to the original URL, send a GET request to the `/urls/original/{shortUrl}`. Replace `{shortUrl}` with the "shortUrl", example `2edf5e51`.
 ## [DELETE] - Remove URL from DB
 To remove URL from DB, send DELETE request to `/urls/remove/{id}`. Replace `{id}` with the related "id", example `664ba4785b64a14ee2d09a26`.
