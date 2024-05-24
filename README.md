@@ -36,7 +36,7 @@ JSON Body:
     "originalUrl": "http://example.com"
 }
 ```
-Exampel Output:
+Example Output:
 ```JSON
 {
     "id": "664ba4785b64a14ee2d09a26",
